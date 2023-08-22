@@ -37,7 +37,6 @@ body {
 	padding: 5px;
 	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 	display: flex;
-	margin-top: 33px;
 }
 
 .card img {
@@ -60,6 +59,7 @@ body {
 	color: var(--main-bg-color);
 }
 .see-more {
+	width: 100%;
 	text-align: left;
 	cursor: pointer;
 	border: none;
@@ -72,7 +72,8 @@ body {
 	justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
+.hebergements-and-populaires section,
+.activites {
 	padding: 30px;
 	box-sizing: border-box;
 }
@@ -81,14 +82,12 @@ body {
 .hebergements {
 	width: 65%;
 }
-/* .hebergements-cards {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
-} */
 
 .hebergements-cards .card-content {
-	padding-left: 15px;
+	padding: 5px 0 5px 15px;
+}
+.hebergements-cards .card-subtitle{
+    margin : 5px 0;
 }
 .hebergements-cards img {
 	width: 100%;
@@ -140,6 +139,33 @@ body {
 	margin-bottom: 5px;
 }
 
+/****** Activites ***********/
+
+.activites {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.activites-cards {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+.activites-cards .card {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.activites-cards img {
+	height: 100%;
+	max-width: 100%;
+	border-radius: 20px 20px 0 0;
+}
+.activites-cards .card-title {
+	padding: 15px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -148,14 +174,28 @@ body {
 	.main-container {
 		padding: 0 50px;
 	}
+
 	.hebergements-and-populaires section {
 		border-radius: 20px;
 		background-color: var(--main-bg-color);
 	}
+
 	.hebergements-cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
+	}
+
+	.activites-cards {
+		gap: 30px;
+	}
+
+	.activites-cards .card {
+		aspect-ratio: 1.35/2;
+	}
+
+	.card {
+		margin-top: 33px;
 	}
 }
 @media (min-width: 767.98px) and (max-width: 1024px) {
@@ -204,8 +244,20 @@ body {
 		background-color: var(--main-bg-color);
 	}
 
-	.hebergements-cards img {
+	.hebergements-cards img,
+	.activites-cards img {
 		height: 124px;
-		/* aspect-ratio: 2.5/1; */
+	}
+
+	.see-more {
+		margin-top: 33px;
+	}
+
+	.activites-cards {
+		flex-direction: column;
+	}
+
+	.card {
+		margin-top: 15px;
 	}
 }

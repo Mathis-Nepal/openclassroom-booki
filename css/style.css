@@ -44,7 +44,8 @@ body {
 }
 
 .card-title,
-.see-more {
+.see-more,
+.list-link a {
 	font-size: 16px;
 }
 .card-subtitle {
@@ -66,6 +67,15 @@ body {
 	background-color: transparent;
 }
 
+a {
+	text-decoration: none;
+	color: black;
+}
+
+li {
+	list-style: none;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
 	display: flex;
@@ -78,6 +88,11 @@ body {
 	box-sizing: border-box;
 }
 
+footer {
+	padding: 0px 30px 30px 0px;
+	box-sizing: border-box;
+}
+
 /****** Hebergements ***********/
 .hebergements {
 	width: 65%;
@@ -86,8 +101,8 @@ body {
 .hebergements-cards .card-content {
 	padding: 5px 0 5px 15px;
 }
-.hebergements-cards .card-subtitle{
-    margin : 5px 0;
+.hebergements-cards .card-subtitle {
+	margin: 5px 0;
 }
 .hebergements-cards img {
 	width: 100%;
@@ -164,6 +179,24 @@ body {
 }
 .activites-cards .card-title {
 	padding: 15px;
+}
+
+/****** Footer ***********/
+footer {
+	background-color: var(--main-bg-color);
+	display: flex;
+	justify-content: space-between;
+}
+.container-part-footer {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	width: 100%;
+	margin: 30px 0px 0 30px;
+}
+
+footer .list-link li {
+	margin-top: 15px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -259,5 +292,9 @@ body {
 
 	.card {
 		margin-top: 15px;
+	}
+
+	footer {
+		flex-direction: column;
 	}
 }

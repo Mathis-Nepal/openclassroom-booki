@@ -13,10 +13,33 @@
 
 	<body>
 		<div class="main-container">
-			<header></header>
+			<header>
+				<img class="logo" src="./images/logo/Booki.png" alt="logo de Booki" />
+				<nav class="navigation">
+					<ul class="list-link">
+						<li><a href="#hebergement">Hébergements</a></li>
+						<li><a href="#activity">Activités</a></li>
+					</ul>
+				</nav>
+			</header>
 			<main>
+				<section class="search-section">
+					<h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
+					<p class="section-subtitle">En plein centre-ville ou en pleine nature</p>
+
+					<form class="form-container" action="/rechercher" method="get">
+						<label for="search-input"><i class="fa-solid fa-location-dot"></i></label>
+						<input class="search-input" id="search-input" name="search-input" type="search" value="Marseille,France" />
+						<input class="search-button" type="button" value="Rechercher" />
+					</form>
+
+					<div class="informations">
+						<i class="fa-solid fa-info"></i>
+						<p>Plus de 500 logements sont disponibles dans cette ville</p>
+					</div>
+				</section>
 				<div class="hebergements-and-populaires">
-					<section class="hebergements">
+					<section id="hebergement" class="hebergements">
 						<h2 class="section-title">Hébergements à Marseille</h2>
 						<div class="hebergements-cards">
 							<article class="card">
@@ -185,7 +208,7 @@
 					</section>
 				</div>
 				<section class="activites">
-					<h2 class="section-title">Activités à Marseille</h2>
+					<h2 id="activity" class="section-title">Activités à Marseille</h2>
 					<div class="activites-cards">
 						<article class="card">
 							<img src="./images/activites/florian-wehde.jpg" alt="Image de la chambre d'hôtel montrant un lit" />

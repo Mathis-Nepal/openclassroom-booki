@@ -41,6 +41,11 @@ body {
 	filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card:hover {
+	transform: scale(1.1);
+	transition: transform 0.5s;
+}
+
 .card img {
 	object-fit: cover;
 }
@@ -320,6 +325,7 @@ footer .list-link li {
 	}
 
 	.hebergements-cards {
+        margin-top: 30px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
@@ -335,7 +341,7 @@ footer .list-link li {
 		overflow: hidden;
 	}
 
-	.card {
+	.card:not(.hebergements-cards .card) {
 		margin-top: 33px;
 	}
 

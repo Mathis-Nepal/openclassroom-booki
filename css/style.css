@@ -74,6 +74,7 @@ body {
 	cursor: pointer;
 	border: none;
 	background-color: transparent;
+	color: black;
 }
 
 a {
@@ -143,12 +144,14 @@ header .list-link a:hover {
 }
 
 .search-input {
+	box-sizing: border-box;
 	border-width: 1px 0;
 	border-style: solid;
 	border-color: var(--main-bg-color);
 	padding: 14px 20px;
 	font-weight: 700;
 	background-color: transparent;
+	border-radius: 0;
 }
 .form-container .fa-location-dot {
 	color: black;

@@ -96,16 +96,22 @@ li {
 
 /****** filter ***********/
 
+.no-style {
+	font-size: 13px;
+}
+
 .filter-container {
 	margin-bottom: 30px;
 }
 
 .filter-title {
+	display: block;
 	font-size: 18px;
 	margin-bottom: 20px;
 }
 
 .filter-button {
+	display: flex;
 	padding: 10px 20px;
 	border-radius: 25px;
 	border: 2px solid var(--main-bg-color);
@@ -156,6 +162,11 @@ header .list-link li {
 	font-weight: 700;
 	background-color: transparent;
 	border-radius: 0;
+}
+
+.search-input:focus {
+	outline: 2px solid var(--main-color);
+	border-radius: 2px;
 }
 .form-container .fa-location-dot {
 	color: black;
@@ -216,8 +227,16 @@ footer {
 }
 
 .hebergements-cards .card-content {
-	padding: 5px 0 5px 15px;
+	padding: 5px 0 5px clamp(0px, 5px + 1%, 15px);
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
+.hebergements-cards .card-title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
 .hebergements-cards .card-subtitle {
 	margin: 5px 0;
 }
@@ -288,7 +307,6 @@ footer {
 }
 .activites-cards .card {
 	flex: 1;
-
 	flex-direction: column;
 }
 
@@ -299,7 +317,11 @@ footer {
 	overflow: hidden;
 }
 .activites-cards .card-title {
-	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	padding: clamp(0px, 5px + 0.5vw, 1rem);
+	height: clamp(1rem, 0.5rem + 5vw, 55px);
 }
 
 /****** Footer ***********/
@@ -335,8 +357,8 @@ footer .list-link li {
 	.hebergements-cards {
 		margin-top: 30px;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(3, calc(33.33% - 20px));
 		gap: 30px;
 	}
 
@@ -380,8 +402,9 @@ footer .list-link li {
 		border-radius: 0 15px 15px 0;
 	}
 
-	.filter-button {
-		margin-right: 10px;
+	.filter-content {
+		display: flex;
+		gap: 10px;
 	}
 
 	.search-section {
@@ -419,11 +442,11 @@ footer .list-link li {
 		width: 100%;
 	}
 
-	.populaires-cards .card-title {
+	.card-title {
 		font-size: 14px;
 	}
 
-	.populaires-cards .card-subtitle {
+	.card-subtitle {
 		font-size: 13px;
 	}
 }
@@ -514,6 +537,13 @@ footer .list-link li {
 	.filter-content {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
+		grid-template-rows: 1;
+		gap: 15px;
+	}
+	.filter-button {
+		padding: 10px 15px;
+	}
+	.no-style {
+		font-size: 12px;
 	}
 }

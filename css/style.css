@@ -80,7 +80,7 @@ body {
 .see-more:hover,
 .container-part-footer a:hover,
 header .list-link a:hover,
-/* header .list-link a:visited, */
+header .list-link a:visited,
 .container-part-footer a:hover {
 	color: var(--main-color);
 	transition: color 0.2s ease-in-out;

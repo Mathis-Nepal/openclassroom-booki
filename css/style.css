@@ -363,10 +363,6 @@ footer .list-link li {
 		gap: 30px;
 	}
 
-	.activites-cards {
-		gap: 30px;
-	}
-
 	.activites-cards .card {
 		aspect-ratio: 1.35/2;
 		overflow: hidden;
@@ -538,7 +534,7 @@ footer .list-link li {
 	.filter-content {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1;
+		grid-template-rows: 1fr;
 		gap: 15px;
 	}
 	.filter-button {
